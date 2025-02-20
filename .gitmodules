@@ -1,6 +1,3 @@
-[submodule "Layne/Layne/PyTorch-Simple-MaskRCNN"]
-	path = Layne/Layne/PyTorch-Simple-MaskRCNN
-	url = https://github.com/Okery/PyTorch-Simple-MaskRCNN.git
 [submodule "Layne/PyTorch-Simple-MaskRCNN"]
 	path = Layne/PyTorch-Simple-MaskRCNN
 	url = https://github.com/Okery/PyTorch-Simple-MaskRCNN.git
