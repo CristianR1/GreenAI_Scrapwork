@@ -1,0 +1,202 @@
+Module Usage Report
+==================
+
+Local Functions
+===============
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line     288 | Condition.wait                                                                |  0.32 |  0.00 |  0.38
+Line     942 | Thread.run                                                                    |  0.32 |  0.00 |  0.76
+
+Inline Function Calls
+=====================
+
+Module: os
+----------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       3 | import os as _os                                                              |  0.00 |  0.00 |  0.00
+Line    1644 | if hasattr(_os, "register_at_fork"):                                          |  0.00 |  0.00 |  0.00
+Line    1645 | _os.register_at_fork(after_in_child=_after_fork)                              |  0.00 |  0.00 |  0.00
+
+Module: sys
+-----------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       4 | import sys as _sys                                                            |  0.00 |  0.00 |  0.00
+Line     880 | self._stderr = _sys.stderr                                                    |  0.00 |  0.00 |  0.00
+Line     975 | if self._daemonic and _sys is None:                                           |  0.00 |  0.00 |  0.00
+Line    1011 | _sys.settrace(_trace_hook)                                                    |  0.00 |  0.00 |  0.00
+Line    1013 | _sys.setprofile(_profile_hook)                                                |  0.00 |  0.00 |  0.00
+Line    1274 | if _sys is not None and _sys.stderr is not None:                              |  0.00 |  0.00 |  0.00
+Line    1275 | stderr = _sys.stderr                                                          |  0.00 |  0.00 |  0.00
+Line    1307 | old_sys_excepthook = _sys.excepthook                                          |  0.00 |  0.00 |  0.00
+Line    1310 | if old_sys_excepthook is None:                                                |  0.00 |  0.00 |  0.00
+Line    1313 | sys_exc_info = _sys.exc_info                                                  |  0.00 |  0.00 |  0.00
+Line    1315 | local_sys = _sys                                                              |  0.00 |  0.00 |  0.00
+Line    1331 | if local_sys is not None and local_sys.stderr is not None:                    |  0.00 |  0.00 |  0.00
+Line    1332 | stderr = local_sys.stderr                                                     |  0.00 |  0.00 |  0.00
+Line    1339 | if local_sys is not None and local_sys.excepthook is not None:                |  0.00 |  0.00 |  0.00
+Line    1340 | sys_excepthook = local_sys.excepthook                                         |  0.00 |  0.00 |  0.00
+Line    1342 | sys_excepthook = old_sys_excepthook                                           |  0.00 |  0.00 |  0.00
+
+Module: _thread
+---------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       5 | import _thread                                                                |  0.00 |  0.00 |  0.00
+Line      26 | __all__ = ['get_ident', 'active_count', 'Condition', 'current_thread',        |  0.00 |  0.00 |  0.00
+Line      27 | 'enumerate', 'main_thread', 'TIMEOUT_MAX',                                    |  0.00 |  0.00 |  0.00
+Line      30 | 'setprofile', 'settrace', 'local', 'stack_size',                              |  0.00 |  0.00 |  0.00
+Line      31 | 'excepthook', 'ExceptHookArgs', 'gettrace', 'getprofile']                     |  0.00 |  0.00 |  0.00
+Line      34 | _start_new_thread = _thread.start_new_thread                                  |  0.00 |  0.00 |  0.00
+Line      35 | _allocate_lock = _thread.allocate_lock                                        |  0.00 |  0.00 |  0.00
+Line      36 | _set_sentinel = _thread._set_sentinel                                         |  0.00 |  0.00 |  0.00
+Line      37 | get_ident = _thread.get_ident                                                 |  0.00 |  0.00 |  0.00
+Line      39 | get_native_id = _thread.get_native_id                                         |  0.00 |  0.00 |  0.00
+Line      44 | ThreadError = _thread.error                                                   |  0.00 |  0.00 |  0.00
+Line      46 | _CRLock = _thread.RLock                                                       |  0.00 |  0.00 |  0.00
+Line      49 | TIMEOUT_MAX = _thread.TIMEOUT_MAX                                             |  0.00 |  0.00 |  0.00
+Line      50 | del _thread                                                                   |  0.00 |  0.00 |  0.00
+Line     280 | # Return True if lock is owned by current_thread.                             |  0.00 |  0.00 |  0.00
+Line     871 | self._daemonic = current_thread().daemon                                      |  0.00 |  0.00 |  0.00
+Line     879 | # Copy of sys.stderr used by self._invoke_excepthook()                        |  0.00 |  0.00 |  0.00
+Line     881 | self._invoke_excepthook = _make_invoke_excepthook()                           |  0.00 |  0.00 |  0.00
+Line     935 | _start_new_thread(self._bootstrap, ())                                        |  0.00 |  0.00 |  0.00
+Line    1018 | self._invoke_excepthook(self)                                                 |  0.00 |  0.00 |  0.00
+Line    1033 | # (release_sentinel in _threadmodule.c) releases ._tstate_lock, and           |  0.00 |  0.00 |  0.00
+Line    1043 | # Special case:  _main_thread releases ._tstate_lock via this                 |  0.00 |  0.00 |  0.00
+Line    1062 | # current_thread()), and would block.                                         |  0.00 |  0.00 |  0.00
+Line    1092 | if self is current_thread():                                                  |  0.00 |  0.00 |  0.00
+Line    1252 | from _thread import (_excepthook as excepthook,                               |  0.00 |  0.00 |  0.00
+Line    1253 | _ExceptHookArgs as ExceptHookArgs)                                            |  0.00 |  0.00 |  0.00
+Line    1255 | # Simple Python implementation if _thread._excepthook() is not available      |  0.00 |  0.00 |  0.00
+Line    1259 | _ExceptHookArgs = namedtuple(                                                 |  0.00 |  0.00 |  0.00
+Line    1260 | 'ExceptHookArgs',                                                             |  0.00 |  0.00 |  0.00
+Line    1263 | def ExceptHookArgs(args):                                                     |  0.00 |  0.00 |  0.00
+Line    1264 | return _ExceptHookArgs(*args)                                                 |  0.00 |  0.00 |  0.00
+Line    1266 | def excepthook(args, /):                                                      |  0.00 |  0.00 |  0.00
+Line    1297 | # Original value of threading.excepthook                                      |  0.00 |  0.00 |  0.00
+Line    1298 | __excepthook__ = excepthook                                                   |  0.00 |  0.00 |  0.00
+Line    1301 | def _make_invoke_excepthook():                                                |  0.00 |  0.00 |  0.00
+Line    1302 | # Create a local namespace to ensure that variables remain alive              |  0.00 |  0.00 |  0.00
+Line    1303 | # when _invoke_excepthook() is called, even if it is called late during       |  0.00 |  0.00 |  0.00
+Line    1306 | old_excepthook = excepthook                                                   |  0.00 |  0.00 |  0.00
+Line    1308 | if old_excepthook is None:                                                    |  0.00 |  0.00 |  0.00
+Line    1309 | raise RuntimeError("threading.excepthook is None")                            |  0.00 |  0.00 |  0.00
+Line    1311 | raise RuntimeError("sys.excepthook is None")                                  |  0.00 |  0.00 |  0.00
+Line    1314 | local_print = print                                                           |  0.00 |  0.00 |  0.00
+Line    1317 | def invoke_excepthook(thread):                                                |  0.00 |  0.00 |  0.00
+Line    1318 | global excepthook                                                             |  0.00 |  0.00 |  0.00
+Line    1320 | hook = excepthook                                                             |  0.00 |  0.00 |  0.00
+Line    1322 | hook = old_excepthook                                                         |  0.00 |  0.00 |  0.00
+Line    1324 | args = ExceptHookArgs([*sys_exc_info(), thread])                              |  0.00 |  0.00 |  0.00
+Line    1336 | local_print("Exception in threading.excepthook:",                             |  0.00 |  0.00 |  0.00
+Line    1344 | sys_excepthook(*sys_exc_info())                                               |  0.00 |  0.00 |  0.00
+Line    1349 | return invoke_excepthook                                                      |  0.00 |  0.00 |  0.00
+Line    1399 | # If they invoke anything in threading.py that calls current_thread(), they   |  0.00 |  0.00 |  0.00
+Line    1401 | # Their purpose is to return *something* from current_thread().               |  0.00 |  0.00 |  0.00
+Line    1430 | def current_thread():                                                         |  0.00 |  0.00 |  0.00
+Line    1445 | This function is deprecated, use current_thread() instead.                    |  0.00 |  0.00 |  0.00
+Line    1451 | return current_thread()                                                       |  0.00 |  0.00 |  0.00
+Line    1482 | current_thread(), and the main thread. It excludes terminated threads and     |  0.00 |  0.00 |  0.00
+Line    1490 | _threading_atexits = []                                                       |  0.00 |  0.00 |  0.00
+Line    1507 | _threading_atexits.append(call)                                               |  0.00 |  0.00 |  0.00
+Line    1510 | from _thread import stack_size                                                |  0.00 |  0.00 |  0.00
+Line    1516 | _main_thread = _MainThread()                                                  |  0.00 |  0.00 |  0.00
+Line    1522 | # Obscure:  other threads may be waiting to join _main_thread.  That's        |  0.00 |  0.00 |  0.00
+Line    1527 | if _main_thread._is_stopped:                                                  |  0.00 |  0.00 |  0.00
+Line    1536 | for atexit_call in reversed(_threading_atexits):                              |  0.00 |  0.00 |  0.00
+Line    1540 | if _main_thread.ident == get_ident():                                         |  0.00 |  0.00 |  0.00
+Line    1541 | tlock = _main_thread._tstate_lock                                             |  0.00 |  0.00 |  0.00
+Line    1547 | _main_thread._stop()                                                          |  0.00 |  0.00 |  0.00
+Line    1551 | # _main_thread is the thread which imported the threading module.             |  0.00 |  0.00 |  0.00
+Line    1552 | # In this case, ignore _main_thread, similar behavior than for threads        |  0.00 |  0.00 |  0.00
+Line    1553 | # spawned by C libraries or using _thread.start_new_thread().                 |  0.00 |  0.00 |  0.00
+Line    1574 | def main_thread():                                                            |  0.00 |  0.00 |  0.00
+Line    1580 | return _main_thread                                                           |  0.00 |  0.00 |  0.00
+Line    1582 | # get thread-local implementation, either from the thread                     |  0.00 |  0.00 |  0.00
+Line    1586 | from _thread import _local as local                                           |  0.00 |  0.00 |  0.00
+Line    1588 | from _threading_local import local                                            |  0.00 |  0.00 |  0.00
+Line    1597 | global _active_limbo_lock, _main_thread                                       |  0.00 |  0.00 |  0.00
+Line    1609 | # by thread.start_new_thread().                                               |  0.00 |  0.00 |  0.00
+Line    1612 | _main_thread = current                                                        |  0.00 |  0.00 |  0.00
+
+Module: functools
+-----------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       6 | import functools                                                              |  0.00 |  0.00 |  0.00
+Line    1506 | call = functools.partial(func, *arg, **kwargs)                                |  0.00 |  0.00 |  0.00
+
+Module: time
+------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       8 | from time import monotonic as _time                                           |  0.00 |  0.00 |  0.00
+Line     350 | endtime = _time() + waittime                                                  |  0.00 |  0.00 |  0.00
+Line     352 | waittime = endtime - _time()                                                  |  0.00 |  0.00 |  0.00
+Line     462 | endtime = _time() + timeout                                                   |  0.00 |  0.00 |  0.00
+Line     464 | timeout = endtime - _time()                                                   |  0.00 |  0.00 |  0.00
+Line     642 | self._timeout = timeout                                                       |  0.00 |  0.00 |  0.00
+Line     657 | timeout = self._timeout                                                       |  0.00 |  0.00 |  0.00
+
+Module: _weakrefset
+-------------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line       9 | from _weakrefset import WeakSet                                               |  0.00 |  0.00 |  0.00
+Line     792 | _dangling = WeakSet()                                                         |  0.00 |  0.00 |  0.00
+
+Module: itertools
+-----------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line      10 | from itertools import islice as _islice, count as _count                      |  0.00 |  0.00 |  0.00
+Line     116 | self._count = 0                                                               |  0.00 |  0.00 |  0.00
+Line     129 | self._count,                                                                  |  0.00 |  0.00 |  0.00
+Line     166 | self._count += 1                                                              |  0.00 |  0.00 |  0.00
+Line     171 | self._count = 1                                                               |  0.00 |  0.00 |  0.00
+Line     194 | self._count = count = self._count - 1                                         |  0.00 |  0.00 |  0.00
+Line     206 | self._count, self._owner = state                                              |  0.00 |  0.00 |  0.00
+Line     209 | if self._count == 0:                                                          |  0.00 |  0.00 |  0.00
+Line     211 | count = self._count                                                           |  0.00 |  0.00 |  0.00
+Line     660 | index = self._count                                                           |  0.00 |  0.00 |  0.00
+Line     671 | self._count -= 1                                                              |  0.00 |  0.00 |  0.00
+Line     728 | if self._count \u003e 0:                                                      |  0.00 |  0.00 |  0.00
+Line     767 | return self._count                                                            |  0.00 |  0.00 |  0.00
+Line     781 | _counter = _count(1).__next__                                                 |  0.00 |  0.00 |  0.00
+Line     783 | return name_template % _counter()                                             |  0.00 |  0.00 |  0.00
+Line    1453 | def active_count():                                                           |  0.00 |  0.00 |  0.00
+Line    1466 | This function is deprecated, use active_count() instead.                      |  0.00 |  0.00 |  0.00
+Line    1472 | return active_count()                                                         |  0.00 |  0.00 |  0.00
+
+Module: _collections
+--------------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line      12 | from _collections import deque as _deque                                      |  0.00 |  0.00 |  0.00
+Line      14 | from collections import deque as _deque                                       |  0.00 |  0.00 |  0.00
+Line     258 | self._waiters = _deque()                                                      |  0.00 |  0.00 |  0.00
+
+Module: warnings
+----------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line     404 | import warnings                                                               |  0.00 |  0.00 |  0.00
+Line     405 | warnings.warn('notifyAll() is deprecated, use notify_all() instead',          |  0.00 |  0.00 |  0.00
+Line     564 | warnings.warn('isSet() is deprecated, use is_set() instead',                  |  0.00 |  0.00 |  0.00
+Line    1213 | warnings.warn('isDaemon() is deprecated, get the daemon attribute instead',   |  0.00 |  0.00 |  0.00
+Line    1224 | warnings.warn('setDaemon() is deprecated, set the daemon attribute instead',  |  0.00 |  0.00 |  0.00
+Line    1235 | warnings.warn('getName() is deprecated, get the name attribute instead',      |  0.00 |  0.00 |  0.00
+Line    1246 | warnings.warn('setName() is deprecated, set the name attribute instead',      |  0.00 |  0.00 |  0.00
+Line    1448 | import warnings                                                               |  0.00 |  0.00 |  0.00
+Line    1449 | warnings.warn('currentThread() is deprecated, use current_thread() instead',  |  0.00 |  0.00 |  0.00
+Line    1470 | warnings.warn('activeCount() is deprecated, use active_count() instead',      |  0.00 |  0.00 |  0.00
+
+Module: traceback
+-----------------
+Line Numbers | Functions                                                                     | CPU % | GPU % | SYS %
+---------------------------------------------------------------------------------------------------------------------
+Line    1256 | from traceback import print_exception as _print_exception                     |  0.00 |  0.00 |  0.00
+Line    1292 | _print_exception(args.exc_type, args.exc_value, args.exc_traceback,           |  0.00 |  0.00 |  0.00
